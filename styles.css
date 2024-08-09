@@ -561,6 +561,13 @@ section {
   /* Scrollbar track color */
 }
 
+.projects-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
 .project {
   display: inline-block;
   background-color: var(--color-surface);
@@ -656,13 +663,6 @@ section {
   background-color: var(--color-accent);
 }
 
-.projects-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
 .scroll-button {
   position: absolute;
   top: 50%;
@@ -688,23 +688,6 @@ section {
 
 .right-arrow {
   right: 0;
-}
-
-/* Your existing .project styles */
-.project {
-  display: inline-block;
-  background-color: var(--color-surface);
-  padding: 10px;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  min-width: 300px;
-  max-width: 300px;
-  white-space: normal;
-  margin: var(--space-md);
-  scroll-snap-align: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
 }
 
 /* contact section */
