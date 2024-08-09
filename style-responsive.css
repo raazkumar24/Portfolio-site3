@@ -1,0 +1,311 @@
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .left,
+  .center,
+  .right {
+    width: 45%; /* Adjust width for medium screens */
+  }
+}
+
+/* For screens that are 1024px wide or less */
+@media screen and (max-width: 1024px) {
+  /* Home section*/
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content .left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .content .right {
+    width: 100%;
+    text-align: center;
+    margin-top: var(--space-md);
+  }
+
+  .right .link {
+    display: inline-block;
+  }
+
+  .right .link a {
+    margin: 0 10px;
+  }
+
+  .right .link {
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  /* end home section */
+
+  /* start about section */
+  .about-content {
+    padding: 40px 30px 0;
+  }
+
+  .about-me img {
+    width: 300px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-text-secondary);
+  }
+
+  .about-me {
+    justify-content: space-between;
+  }
+
+  .about-me .text {
+    margin-top: var(--space-md);
+    padding: 10px;
+  }
+
+  .text h2 {
+    font-size: var(--font-size-medium);
+    margin: var(--space-sm);
+  }
+  /* end about section */
+
+  /* start project section */
+  .projects-content {
+    padding: 40px 30px;
+  }
+
+  .project-text {
+    margin-top: var(--space-md);
+    padding: 10px;
+  }
+}
+
+/* For screens that are 786px wide or less */
+@media screen and (max-width: 786px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  header .logo {
+    font-size: var(--font-size-medium);
+  }
+
+  .navbar {
+    display: none;
+    align-items: center;
+    gap: var(--space-sm);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100vh;
+    background: var(--color-background-trans);
+    backdrop-filter: blur(10px); /* Adjust the blur level as needed */
+    box-shadow: 0 4px 6px var(--color-shadow);
+    border: 1px solid var(--color-border);
+    border-radius: 10px; /* Optional: for rounded corners */
+    padding: var(--space-md);
+    overflow: hidden;
+    animation: slideInFromRight 0.5s ease-in-out forwards;
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      right: -100%;
+      opacity: 0;
+    }
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    padding: 20px;
+    text-align: center;
+  }
+
+  header .navbar ul li a {
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  header .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Home section*/
+  .content {
+    padding: 0px 20px;
+  }
+
+  .left {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-md);
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .left h1 {
+    font-size: 2.5rem;
+  }
+
+  .center img {
+    width: 350px;
+  }
+
+  /* end home  */
+
+  /* start about section */
+  .about-content {
+    padding: 20px 30px 0;
+  }
+
+  .about-me img {
+    width: 400px;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+
+  /* end about section */
+
+  /* start project section */
+
+  .projects-content {
+    padding: 20px 30px 0;
+  }
+
+  /* end project section */
+
+  /* start contact section */
+
+  .contact-content {
+    padding: 20px 30px 0;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contact-content h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .contact-content .contact-text {
+    font-size: var(--font-size-small);
+  }
+
+  .contact-form,
+  .info {
+    margin-top: var(--space-md);
+    width: 100%;
+  }
+
+  .contact-info .info ul li {
+    font-size: var(--font-size-small);
+  }
+
+  .info ul li i {
+    font-size: var(--font-size-small);
+  }
+
+  /* end contact section */
+
+  /* End contact section */
+}
+
+/* For screens that are 480px wide or less */
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 0 10px;
+  }
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .center img {
+    width: 300px;
+    margin: 20px 0;
+  }
+
+  .right .icons i {
+    font-size: var(--font-size-medium);
+  }
+
+  /* about section start */
+
+  .about-content {
+    padding: 20px 20px 0;
+  }
+
+  .about-content h1,
+  .skills h2 {
+    font-size: var(--font-size-large);
+  }
+
+  .about-me .text {
+    font-size: var(--font-size-small);
+  }
+
+  .about-me img {
+    width: 250px;
+  }
+
+  .skills ul li {
+    margin: var(space-xs);
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--font-size-small);
+  }
+
+  /* end about section */
+
+  /* start project section */
+
+  .projects-content {
+    padding: 20px 20px;
+  }
+
+  .projects-content h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .project-text {
+    font-size: var(--font-size-small);
+  }
+
+  .project-info h2 {
+    font-size: var(--font-size-medium);
+  }
+
+  /* end project section */
+
+  .about-content {
+    padding: 20px 20px 0;
+  }
+}
